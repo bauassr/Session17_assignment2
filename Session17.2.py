@@ -21,6 +21,7 @@ print("""Using Binomial Formula:-C (n, k) = n!/(k!(n−k)!)""")
 
 P = (math.factorial(Number_of_question)/(math.factorial(K)*math.factorial(Number_of_WrongQ))) * ((math.pow(P_right_Answer,K))* (math.pow(p_wrong_answer,Number_of_WrongQ)))
 print("Original probablity for exact 5 'D':",P)
+print("Probablity using built in func",stats.binom.pmf(5,50,1/5))
 
 fig, ax = plt.subplots(1, 1)
 mean, var, skew, kurt = stats.binom.stats(Number_of_question, P, moments='mvsk')
